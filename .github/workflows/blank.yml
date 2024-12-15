@@ -29,7 +29,7 @@ jobs:
       - name: Flutter Setup
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: 'stable'
+          flutter-version: '3.24.4'
           
       - name: Get Dependencies
         run: flutter pub get
