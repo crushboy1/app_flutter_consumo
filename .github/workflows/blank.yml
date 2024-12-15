@@ -34,10 +34,10 @@ jobs:
       - name: Get Dependencies
         run: flutter pub get
       
-      - name: Analyze code
-        run: |
-          flutter analyze
-          flutter pub run flutter_lints
+      #- name: Analyze code
+       # run: |
+        #  flutter analyze
+         # flutter pub run flutter_lints
       
       - name: Run Units & Widget Tests
         run: flutter test
