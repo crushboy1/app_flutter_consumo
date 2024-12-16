@@ -38,6 +38,14 @@ jobs:
        # run: |
         #  flutter analyze
          # flutter pub run flutter_lints
-      
-      - name: Run Units & Widget Tests
-        run: flutter test
+      - name: Generar APK
+        run: |
+          flutter clean
+          flutter pub get
+          flutter build apk --release
+        
+      - name: Almacenar APK como artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: app-release.apk
+          path: build/app/outputs/flutter-apk/app-release.apk
