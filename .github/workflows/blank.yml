@@ -42,7 +42,7 @@ jobs:
         run: |
           flutter clean
           flutter pub get
-          flutter build apk --release -t /lib/widget/main.dart
+          flutter build apk --release -t lib/widget/main.dart
         
       - name: Almacenar APK como artifact
         uses: actions/upload-artifact@v3
